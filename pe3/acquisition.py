@@ -627,7 +627,7 @@ def print_values_for_tables():
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 
 
-print(codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-32').readline())
+print(codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-8').readline())
 print(os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
 
 
