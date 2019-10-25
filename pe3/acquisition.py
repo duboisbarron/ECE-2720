@@ -634,6 +634,8 @@ print(t1)
 print(t1)
 print(t1)
 print(t1)
+filesize = os.path.getsize('/classes/ece2720/pe3/unicode1.dat')
+print(t1, filesize)
 
 print(t1, os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
 
