@@ -626,19 +626,19 @@ def print_values_for_tables():
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 
-f = codecs.open('/classes/ece2720/pe3/unicode1.dat', 'r', 'UTF-8')
+f = codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-8')
 print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
 
-f = codecs.open('/classes/ece2720/pe3/unicode2.dat', 'r', 'UTF-32-le')
+f = codecs.open('/classes/ece2720/pe3/unicode2.dat', 'rb', 'UTF-32-le')
 print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode2.dat'))
 
-f = codecs.open('/classes/ece2720/pe3/unicode3.dat', 'r', 'UTF-8')
+f = codecs.open('/classes/ece2720/pe3/unicode3.dat', 'rb', 'UTF-8')
 print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode3.dat'))
 
-f = codecs.open('/classes/ece2720/pe3/unicode4.dat', 'r', 'UTF-16')
+f = codecs.open('/classes/ece2720/pe3/unicode4.dat', 'rb', 'UTF-16')
 print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode4.dat'))
 
-f = codecs.open('/classes/ece2720/pe3/unicode5.dat', 'r', 'UTF-32-be')
+f = codecs.open('/classes/ece2720/pe3/unicode5.dat', 'rb', 'UTF-32-be')
 print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode5.dat'))
 
 # print('File Size is: ' + str(os.path.getsize('unicode4.dat')))
