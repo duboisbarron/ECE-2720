@@ -562,12 +562,29 @@ def print_values_for_tables():
     get_family_survival_rate()
 
 
-make_histogram()
-use_scipy_n_prob_plot()
-age_histogram()
-fare_histogram()
-age_prob_plot()
-fare_prob_plot()
+
+# f = codecs.open('unicode1.dat', 'r', 'UTF-8')
+# print(f.readline(), os.path.getsize('unicode1.dat'))
+#
+# f = codecs.open('unicode2.dat', 'r', 'UTF-32-le')
+# print(f.readline(), os.path.getsize('unicode2.dat'))
+#
+# f = codecs.open('unicode3.dat', 'r', 'UTF-8')
+# print(f.readline(), os.path.getsize('unicode3.dat'))
+#
+# f = codecs.open('unicode4.dat', 'r', 'UTF-16')
+# print(f.readline(), os.path.getsize('unicode4.dat'))
+#
+# f = codecs.open('unicode5.dat', 'r', 'UTF-32-be')
+# print(f.readline(), os.path.getsize('unicode5.dat'))
+
+#
+# make_histogram()
+# use_scipy_n_prob_plot()
+# age_histogram()
+# fare_histogram()
+# age_prob_plot()
+# fare_prob_plot()
 
 #
 # print("doing women")
@@ -609,13 +626,32 @@ fare_prob_plot()
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 
-print('UTF-8', '16 Bytes')
-print('UTF-32-le', '48 Bytes')
-print('UTF-8', '14 Bytes')
-print('UTF-16', '32 Bytes')
-print('UTF-32-be', '52 Bytes')
+f = codecs.open('unicode1.dat', 'r', 'UTF-8')
+print(f.readline(), os.path.getsize('unicode1.dat'))
+
+f = codecs.open('unicode2.dat', 'r', 'UTF-32-le')
+print(f.readline(), os.path.getsize('unicode2.dat'))
+
+f = codecs.open('unicode3.dat', 'r', 'UTF-8')
+print(f.readline(), os.path.getsize('unicode3.dat'))
+
+f = codecs.open('unicode4.dat', 'r', 'UTF-16')
+print(f.readline(), os.path.getsize('unicode4.dat'))
+
+f = codecs.open('unicode5.dat', 'r', 'UTF-32-be')
+print(f.readline(), os.path.getsize('unicode5.dat'))
+
+# print('File Size is: ' + str(os.path.getsize('unicode4.dat')))
 
 print_values_for_tables()
+
+
+make_histogram()
+use_scipy_n_prob_plot()
+age_histogram()
+fare_histogram()
+age_prob_plot()
+fare_prob_plot()
 
 
 
