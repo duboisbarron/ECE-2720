@@ -626,30 +626,22 @@ def print_values_for_tables():
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 
-print(codecs.open('/classes/ece2720/pe3/unicode1.dat', encoding='utf-8').readline())
+
+print(codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-32').readline())
 print(os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
 
 
-f = codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-8')
-print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
+print(codecs.open('/classes/ece2720/pe3/unicode2.dat', 'rb', 'UTF-32-le').readline())
+print(os.path.getsize('/classes/ece2720/pe3/unicode2.dat'))
 
-f = codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-16')
-print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
+print(codecs.open('/classes/ece2720/pe3/unicode3.dat', 'rb', 'UTF-8').readline())
+print(os.path.getsize('/classes/ece2720/pe3/unicode3.dat'))
 
-f = codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-32')
-print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
+print(codecs.open('/classes/ece2720/pe3/unicode4.dat', 'rb', 'UTF-16').readline())
+print(os.path.getsize('/classes/ece2720/pe3/unicode4.dat'))
 
-f = codecs.open('/classes/ece2720/pe3/unicode2.dat', 'rb', 'UTF-32-le')
-print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode2.dat'))
-
-f = codecs.open('/classes/ece2720/pe3/unicode3.dat', 'rb', 'UTF-8')
-print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode3.dat'))
-
-f = codecs.open('/classes/ece2720/pe3/unicode4.dat', 'rb', 'UTF-16')
-print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode4.dat'))
-
-f = codecs.open('/classes/ece2720/pe3/unicode5.dat', 'rb', 'UTF-32-be')
-print(f.readline(), os.path.getsize('/classes/ece2720/pe3/unicode5.dat'))
+print(codecs.open('/classes/ece2720/pe3/unicode5.dat', 'rb', 'UTF-32-be').readline())
+print(os.path.getsize('/classes/ece2720/pe3/unicode5.dat'))
 
 # print('File Size is: ' + str(os.path.getsize('unicode4.dat')))
 
