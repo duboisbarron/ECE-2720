@@ -37,7 +37,7 @@ def make_gaussian_pdf(data, figname):
     plt.clf()
 
 def make_histogram():
-    data = get_data('synthetic.csv')
+    data = get_data('/classes/ece2720/pe3/synthetic.csv')
 
     plt.hist(data, bins=100, density=True)
 
@@ -56,7 +56,7 @@ def make_histogram():
 
 # TODO: FIGURE OUT WHICH PLOT IS CORRECT
 def use_scipy_n_prob_plot():
-    data = get_data('synthetic.csv')
+    data = get_data('/classes/ece2720/pe3/synthetic.csv')
     scipy.stats.probplot(data, plot=plt.subplot())
     plt.title('Probability Plot for "synthetic.csv"')
     plt.savefig('figure2')
@@ -134,7 +134,7 @@ def maximum_likelihood_estimator_sig_sq(np_array):
 
 def get_ml_sig():
 
-    data = get_data('synthetic.csv')
+    data = get_data('/classes/ece2720/pe3/synthetic.csv')
 
     mu = maximum_likelihood_estimator_mu(data)
     print('maximum likelihood estimation of mu is: ' + str(mu))
@@ -142,12 +142,12 @@ def get_ml_sig():
     print('maximum likelihood estimation of variance is: ' + str(maximum_likelihood_estimator_sig_sq(data, mu)))
 
 def max_like_mu():
-    data = get_data('synthetic.csv')
+    data = get_data('/classes/ece2720/pe3/synthetic.csv')
 
     print('maximum likelihood estimation of mu is: ' + str(maximum_likelihood_estimator_mu(data)))
 
 def make_n_prob_plot():
-    data = get_data('synthetic.csv')
+    data = get_data('/classes/ece2720/pe3/synthetic.csv')
     data.sort()
     mean = np.mean(data)
     std = np.std(data)
@@ -168,7 +168,7 @@ def make_n_prob_plot():
 # END PART 2
 
 def age_histogram():
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
     valid_ages = np.array([])
     for row in csv_reader:
@@ -206,7 +206,7 @@ def age_histogram():
     # plt.show()
 
 def age_prob_plot():
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
     row_num = 0
     column_headers = []
@@ -235,7 +235,7 @@ def age_prob_plot():
 # FARE HISTOGRAM
 def fare_histogram():
     # print("CALKSJFLKA")
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
     row_num = 0
     column_headers = []
@@ -272,7 +272,7 @@ def fare_histogram():
 
 
 def fare_prob_plot():
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
     valid_fares = np.array([])
     for row in csv_reader:
@@ -298,8 +298,8 @@ def fare_prob_plot():
 # need total number of survivors and total number of deaths
 
 # return the number of people in the group, the total number of people in the file
-def get_survival_rate():
-    csv_file = open("titanic.csv")
+def get_overall_survival_rate():
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
     row_num = 0
     column_headers = []
@@ -334,7 +334,7 @@ def get_survival_rate():
 # need total number of survivors and total number of deaths
 # return the number of people in the group, the total number of people in the file
 def get_survival_rate_men_and_women():
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
 
     num_women = 0
@@ -396,7 +396,7 @@ def get_survival_rate_men_and_women():
 
     # return total, float(num_survived), float(num_dead), float(num_survived)/(float(num_survived) + float(num_dead))
 def get_survival_rate_first_class(passenger_class):
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
 
     num_class = 0
@@ -427,7 +427,7 @@ def get_survival_rate_first_class(passenger_class):
 
 # TODO: make sure this shit works
 def get_first_class_sex_survival_rate(passenger_class, passenger_sex):
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
 
     num_in_group = 0
@@ -461,7 +461,7 @@ def get_first_class_sex_survival_rate(passenger_class, passenger_sex):
     # ))
 
 def get_fare_survived_greater(fare):
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
 
     num_in_group = 0
@@ -491,7 +491,7 @@ def get_fare_survived_greater(fare):
     # ))
 
 def get_fare_survived_less(fare):
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
 
     num_in_group = 0
@@ -522,7 +522,7 @@ def get_fare_survived_less(fare):
 
 
 def get_family_survival_rate():
-    csv_file = open("titanic.csv")
+    csv_file = open("/classes/ece2720/pe3/titanic.csv")
     csv_reader = csv.reader(csv_file)
 
     num_in_group = 0
@@ -551,7 +551,7 @@ def get_family_survival_rate():
     # ))
 
 def print_values_for_tables():
-    get_survival_rate()
+    get_overall_survival_rate()
     get_survival_rate_men_and_women()
     get_survival_rate_first_class('1')
     get_survival_rate_first_class('3')
@@ -609,11 +609,11 @@ fare_prob_plot()
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 # detect_chauvenet_criteria(get_data('synthetic.csv'), d_max)
 
-print('UTF-8')
-print('UTF-32-le')
-print('UTF-8')
-print('UTF-16')
-print('UTF-32-be')
+print('UTF-8', '16 Bytes')
+print('UTF-32-le', '48 Bytes')
+print('UTF-8', '14 Bytes')
+print('UTF-16', '32 Bytes')
+print('UTF-32-be', '52 Bytes')
 
 print_values_for_tables()
 
