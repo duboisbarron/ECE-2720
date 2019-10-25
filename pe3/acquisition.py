@@ -628,6 +628,13 @@ def print_values_for_tables():
 
 u1 = codecs.open('/classes/ece2720/pe3/unicode1.dat', encoding='utf-8')
 t1 = u1.readline()
+print(t1)
+print(t1)
+print(t1)
+print(t1)
+print(t1)
+print(t1)
+
 print(t1, os.path.getsize('/classes/ece2720/pe3/unicode1.dat'))
 
 f = codecs.open('/classes/ece2720/pe3/unicode1.dat', 'rb', 'UTF-8')
